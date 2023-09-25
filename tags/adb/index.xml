@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>adb - Tag - 呆呆的小窝~</title>
+        <link>https://0xdaidai.github.io/tags/adb/</link>
+        <description>adb - Tag - 呆呆的小窝~</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 25 Sep 2023 11:27:06 &#43;0800</lastBuildDate><atom:link href="https://0xdaidai.github.io/tags/adb/" rel="self" type="application/rss+xml" /><item>
+    <title>Adb</title>
+    <link>https://0xdaidai.github.io/adb/</link>
+    <pubDate>Mon, 25 Sep 2023 11:27:06 &#43;0800</pubDate>
+    <author>0xdaidai</author>
+    <guid>https://0xdaidai.github.io/adb/</guid>
+    <description><![CDATA[USE ADB in WSL 1 2 3 # ADB export PATH=&#34;$PATH:/mnt/d/Tools/Android/SDK/platform-tools&#34; alias adb=&#34;/mnt/d/Tools/Android/SDK/platform-tools/adb.exe&#34; 由于将adb的路径alias后，默认在sh中是找不到的，若想在sh脚本中使用ADB，需在脚本前添加以下代码: 1 2 #!/bin/bash]]></description>
+</item>
+</channel>
+</rss>
