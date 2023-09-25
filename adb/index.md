@@ -1,7 +1,6 @@
 # Adb
 
 
-# ADB
 ## USE ADB in WSL
 
 ```bash

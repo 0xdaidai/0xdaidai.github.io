@@ -1,7 +1,6 @@
 # Misc
 
 
-# Misc
 ## exp
 ```
 from pwn import *
@@ -143,7 +142,7 @@ int main(int argc, char const *argv[])
 // gcc -O2 pow.c -lcrypto && ./a.out pzlYZX5ZEb && rm ./a.out
 ```
 
-[pow](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7114b46c-fb76-4773-a514-f9cc8eeae1b4/pow.txt)
+python:
 
 ```python
 from Crypto.Util.number import getPrime,bytes_to_long
