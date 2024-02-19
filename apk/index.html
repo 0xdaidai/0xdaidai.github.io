@@ -4,32 +4,32 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Adb - 呆呆的小窝~</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="Adb" />
-<meta property="og:description" content="USE ADB in WSL 1 2 3 # ADB export PATH=&#34;$PATH:/mnt/d/Tools/Android/SDK/platform-tools&#34; alias adb=&#34;/mnt/d/Tools/Android/SDK/platform-tools/adb.exe&#34; 由于将adb的路径alias后，默认在sh中是找不到的，若想在sh脚本中使用ADB，需在脚本前添加以下代码: 1 2 #!/bin/bash" />
+        <title>Apk杂记 - 呆呆的小窝~</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="Apk杂记" />
+<meta property="og:description" content="adb 1 2 adb devices # 查看设备 adb shell ida调试so 一般断在Jni_onload 1 2 adb forward tcp:23946 tcp:23946 adb shell 1 2 cd /data/local/tmp ./androidserver androidserver的位数应该和so对应，" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://0xdaidai.github.io/adb/" /><meta property="og:image" content="https://0xdaidai.github.io/logo.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-09-25T11:27:06+08:00" />
-<meta property="article:modified_time" content="2023-09-25T11:39:22+08:00" /><meta property="og:site_name" content="我的网站" />
+<meta property="og:url" content="https://0xdaidai.github.io/apk/" /><meta property="og:image" content="https://0xdaidai.github.io/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-02-19T11:27:06+08:00" />
+<meta property="article:modified_time" content="2024-02-19T18:27:23+08:00" /><meta property="og:site_name" content="我的网站" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://0xdaidai.github.io/logo.png" /><meta name="twitter:title" content="Adb"/>
-<meta name="twitter:description" content="USE ADB in WSL 1 2 3 # ADB export PATH=&#34;$PATH:/mnt/d/Tools/Android/SDK/platform-tools&#34; alias adb=&#34;/mnt/d/Tools/Android/SDK/platform-tools/adb.exe&#34; 由于将adb的路径alias后，默认在sh中是找不到的，若想在sh脚本中使用ADB，需在脚本前添加以下代码: 1 2 #!/bin/bash"/>
+<meta name="twitter:image" content="https://0xdaidai.github.io/logo.png" /><meta name="twitter:title" content="Apk杂记"/>
+<meta name="twitter:description" content="adb 1 2 adb devices # 查看设备 adb shell ida调试so 一般断在Jni_onload 1 2 adb forward tcp:23946 tcp:23946 adb shell 1 2 cd /data/local/tmp ./androidserver androidserver的位数应该和so对应，"/>
 <meta name="application-name" content="呆呆的小窝~">
 <meta name="apple-mobile-web-app-title" content="呆呆的小窝~"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://0xdaidai.github.io/adb/" /><link rel="prev" href="https://0xdaidai.github.io/misc/" /><link rel="next" href="https://0xdaidai.github.io/mixed_c_with_asm/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://0xdaidai.github.io/apk/" /><link rel="prev" href="https://0xdaidai.github.io/optee_template/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Adb",
+        "headline": "Apk杂记",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/0xdaidai.github.io\/adb\/"
-        },"genre": "posts","keywords": "adb","wordcount":  92 ,
-        "url": "https:\/\/0xdaidai.github.io\/adb\/","datePublished": "2023-09-25T11:27:06+08:00","dateModified": "2023-09-25T11:39:22+08:00","publisher": {
+            "@id": "https:\/\/0xdaidai.github.io\/apk\/"
+        },"genre": "posts","keywords": "adb","wordcount":  349 ,
+        "url": "https:\/\/0xdaidai.github.io\/apk\/","datePublished": "2024-02-19T11:27:06+08:00","dateModified": "2024-02-19T18:27:23+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -100,9 +100,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Adb</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Apk杂记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>0xdaidai</a></span>&nbsp;<span class="post-category">included in <a href="/categories/pwn/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>pwn</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-25">2023-09-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;92 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-02-19">2024-02-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;349 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
@@ -111,61 +111,126 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#use-adb-in-wsl">USE ADB in WSL</a></li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#adb">adb</a></li>
+    <li><a href="#ida调试so">ida调试so</a></li>
+    <li><a href="#jdwp">jdwp</a></li>
+    <li><a href="#jeb">jeb</a></li>
+    <li><a href="#frida">frida</a>
+      <ul>
+        <li><a href="#frida-hexdump">frida-hexdump</a></li>
+      </ul>
+    </li>
+    <li><a href="#frida_hook_libart">frida_hook_libart</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="use-adb-in-wsl">USE ADB in WSL</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># ADB</span>
-</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$PATH</span><span class="s2">:/mnt/d/Tools/Android/SDK/platform-tools&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">adb</span><span class="o">=</span><span class="s2">&#34;/mnt/d/Tools/Android/SDK/platform-tools/adb.exe&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>由于将adb的路径alias后，默认在sh中是找不到的，若想在sh脚本中使用ADB，需在脚本前添加以下代码:</p>
+            </div><div class="content" id="content"><h2 id="adb">adb</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash -i
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nb">shopt</span> -s expand_aliases
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">adb</span> <span class="n">devices</span> <span class="err">#</span> <span class="err">查看设备</span>
+</span></span><span class="line"><span class="cl"><span class="n">adb</span> <span class="n">shell</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="usage">Usage</h2>
+</div><h2 id="ida调试so">ida调试so</h2>
+<p>一般断在Jni_onload</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">adb</span> <span class="n">forward</span> <span class="nl">tcp</span><span class="p">:</span><span class="mi">23946</span> <span class="nl">tcp</span><span class="p">:</span><span class="mi">23946</span>
+</span></span><span class="line"><span class="cl"><span class="n">adb</span> <span class="n">shell</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">cd</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">tmp</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="o">/</span><span class="n">androidserver</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>androidserver的位数应该和so对应，不过跑以下看能不能搜到进程就知道了。</p>
+<p>ida侧选择Debugger-&gt;attach-&gt;Remote ARM Linux/Android debugger，选择attach，找到app进程attach上就行。</p>
+<h2 id="jdwp">jdwp</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">am</span> <span class="n">start</span> <span class="o">-</span><span class="n">D</span> <span class="o">-</span><span class="n">n</span>  <span class="n">com</span><span class="p">.</span><span class="n">bin</span><span class="p">.</span><span class="n">MathGame</span><span class="o">/</span><span class="p">.</span><span class="n">MainActivity</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在手机上执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">ps</span> <span class="o">-</span><span class="n">ef</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">mathgame</span> <span class="err">#</span> <span class="n">getpid</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">adb</span> <span class="n">forward</span> <span class="nl">tcp</span><span class="p">:</span><span class="mi">8700</span> <span class="nl">jdwp</span><span class="p">:{</span><span class="n">pid</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">jdb</span> <span class="o">-</span><span class="n">connect</span> <span class="err">“</span><span class="n">com</span><span class="p">.</span><span class="n">sun</span><span class="p">.</span><span class="n">jdi</span><span class="p">.</span><span class="nl">SocketAttach</span><span class="p">:</span><span class="n">hostname</span><span class="o">=</span><span class="mf">127.0.0.1</span><span class="p">,</span><span class="n">port</span><span class="o">=</span><span class="mi">8700</span><span class="err">”</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="jeb">jeb</h2>
+<p><a href="https://bbs.pediy.com/thread-268316.htm" target="_blank" rel="noopener noreffer ">https://bbs.pediy.com/thread-268316.htm</a></p>
+<h2 id="frida">frida</h2>
+<h3 id="frida-hexdump">frida-hexdump</h3>
+<p>用来dump运行时的dex，常用于脱壳。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb push ready_to_push path
-</span></span><span class="line"><span class="cl">adb pull path_to_want
-</span></span><span class="line"><span class="cl"><span class="c1"># if read-only system</span>
-</span></span><span class="line"><span class="cl">adb remout
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip3 install frida-dexdump
+</span></span><span class="line"><span class="cl">adb forward tcp:27042 tcp:27042
+</span></span><span class="line"><span class="cl">adb forward tcp:27043 tcp:27043
+</span></span><span class="line"><span class="cl"><span class="c1"># 运行app</span>
+</span></span><span class="line"><span class="cl">frida-dexdump -FU
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用d2j_dex2jar反编译，然后拖入jadx分析。</p>
+<h2 id="frida_hook_libart">frida_hook_libart</h2>
+<p><a href="https://github.com/lasting-yang/frida_hook_libart" target="_blank" rel="noopener noreffer ">https://github.com/lasting-yang/frida_hook_libart</a></p>
+<p>可以查看动态注册的jni_onload</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">frida -U -f package_name -l hook_RegisterNatives.js
 </span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2023-09-25</span>
+                <span>Updated on 2024-02-19</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/adb/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/apk/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://0xdaidai.github.io/adb/" data-title="Adb" data-hashtags="adb"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://0xdaidai.github.io/adb/" data-hashtag="adb"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://0xdaidai.github.io/adb/" data-title="Adb"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://0xdaidai.github.io/adb/" data-title="Adb"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://0xdaidai.github.io/adb/" data-title="Adb"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://0xdaidai.github.io/apk/" data-title="Apk杂记" data-hashtags="adb"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://0xdaidai.github.io/apk/" data-hashtag="adb"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://0xdaidai.github.io/apk/" data-title="Apk杂记"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://0xdaidai.github.io/apk/" data-title="Apk杂记"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://0xdaidai.github.io/apk/" data-title="Apk杂记"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -177,8 +242,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/misc/" class="prev" rel="prev" title="Misc"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Misc</a>
-            <a href="/mixed_c_with_asm/" class="next" rel="next" title="Mixed_c_with_asm">Mixed_c_with_asm<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/optee_template/" class="prev" rel="prev" title="Optee_template"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Optee_template</a></div>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">

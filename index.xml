@@ -3,9 +3,17 @@
         <title>呆呆的小窝~</title>
         <link>https://0xdaidai.github.io/</link>
         <description>这是我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 25 Sep 2023 11:38:20 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 19 Feb 2024 11:27:06 &#43;0800</lastBuildDate>
             <atom:link href="https://0xdaidai.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Apk杂记</title>
+    <link>https://0xdaidai.github.io/apk/</link>
+    <pubDate>Mon, 19 Feb 2024 11:27:06 &#43;0800</pubDate>
+    <author>0xdaidai</author>
+    <guid>https://0xdaidai.github.io/apk/</guid>
+    <description><![CDATA[adb 1 2 adb devices # 查看设备 adb shell ida调试so 一般断在Jni_onload 1 2 adb forward tcp:23946 tcp:23946 adb shell 1 2 cd /data/local/tmp ./androidserver androidserver的位数应该和so对应，]]></description>
+</item>
+<item>
     <title>Optee_template</title>
     <link>https://0xdaidai.github.io/optee_template/</link>
     <pubDate>Mon, 25 Sep 2023 11:38:20 &#43;0800</pubDate>
