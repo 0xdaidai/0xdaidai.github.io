@@ -62,6 +62,14 @@
     <description><![CDATA[or4nge 小橘子真好吃~ s0uthwood 逆向天花板 t1anst GOD ttt triplewings next master of pwn Mobilis In Mobili_ 中本航 ssgss web king pil10w yet another web king s1eepy know any except misc newbiereer 一曲长歌，一剑天涯 wood stay hungry stay foolish. crazyman CTF还得看空白神]]></description>
 </item>
 <item>
+    <title>L3HCTF2021</title>
+    <link>https://0xdaidai.github.io/l3hctf2021/</link>
+    <pubDate>Tue, 16 Nov 2021 17:59:18 &#43;0000</pubDate>
+    <author>0xdaidai</author>
+    <guid>https://0xdaidai.github.io/l3hctf2021/</guid>
+    <description><![CDATA[L3GHCTF2021 PWN 躺了个第一，被带飞了。 看了一下只有这题值得记录👇 vul_service 分析 题目来自CVE-2019-0863，注册了一个系统服务，功能是会不断遍历tmp目录]]></description>
+</item>
+<item>
     <title>idapython笔记</title>
     <link>https://0xdaidai.github.io/idapython%E7%AC%94%E8%AE%B0/</link>
     <pubDate>Mon, 01 Mar 2021 22:24:05 &#43;0000</pubDate>

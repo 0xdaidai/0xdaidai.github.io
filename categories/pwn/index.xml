@@ -28,6 +28,14 @@
     <description><![CDATA[USE ADB in WSL 1 2 3 # ADB export PATH=&#34;$PATH:/mnt/d/Tools/Android/SDK/platform-tools&#34; alias adb=&#34;/mnt/d/Tools/Android/SDK/platform-tools/adb.exe&#34; 由于将adb的路径alias后，默认在sh中是找不到的，若想在sh脚本中使用ADB，需在脚本前添加以下代码: 1 2 #!/bin/bash]]></description>
 </item>
 <item>
+    <title>L3HCTF2021</title>
+    <link>https://0xdaidai.github.io/l3hctf2021/</link>
+    <pubDate>Tue, 16 Nov 2021 17:59:18 &#43;0000</pubDate>
+    <author>0xdaidai</author>
+    <guid>https://0xdaidai.github.io/l3hctf2021/</guid>
+    <description><![CDATA[L3GHCTF2021 PWN 躺了个第一，被带飞了。 看了一下只有这题值得记录👇 vul_service 分析 题目来自CVE-2019-0863，注册了一个系统服务，功能是会不断遍历tmp目录]]></description>
+</item>
+<item>
     <title>idapython笔记</title>
     <link>https://0xdaidai.github.io/idapython%E7%AC%94%E8%AE%B0/</link>
     <pubDate>Mon, 01 Mar 2021 22:24:05 &#43;0000</pubDate>
