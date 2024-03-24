@@ -35,13 +35,5 @@
     <guid>https://0xdaidai.github.io/l3hctf2021/</guid>
     <description><![CDATA[L3GHCTF2021 PWN 躺了个第一，被带飞了。 看了一下只有这题值得记录👇 vul_service 分析 题目来自CVE-2019-0863，注册了一个系统服务，功能是会不断遍历tmp目录]]></description>
 </item>
-<item>
-    <title>idapython笔记</title>
-    <link>https://0xdaidai.github.io/idapython%E7%AC%94%E8%AE%B0/</link>
-    <pubDate>Mon, 01 Mar 2021 22:24:05 &#43;0000</pubDate>
-    <author>0xdaidai</author>
-    <guid>https://0xdaidai.github.io/idapython%E7%AC%94%E8%AE%B0/</guid>
-    <description><![CDATA[idapython 从-1开始学习ida。 全部抄自《IDAPython 初学者指南》，手动翻译成了ida7.5+python3。 指令学习 节区操作 1 2 3 4 5 6 7 8]]></description>
-</item>
 </channel>
 </rss>
