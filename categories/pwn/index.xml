@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>pwn - Category - 呆呆的小窝~</title>
+        <title>Pwn - Category - 呆呆的小窝~</title>
         <link>https://0xdaidai.github.io/categories/pwn/</link>
-        <description>pwn - Category - 呆呆的小窝~</description>
+        <description>Pwn - Category - 呆呆的小窝~</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 19 Feb 2024 11:27:06 &#43;0800</lastBuildDate><atom:link href="https://0xdaidai.github.io/categories/pwn/" rel="self" type="application/rss+xml" /><item>
     <title>Apk杂记</title>
     <link>https://0xdaidai.github.io/apk/</link>
@@ -26,6 +26,14 @@
     <author>0xdaidai</author>
     <guid>https://0xdaidai.github.io/adb/</guid>
     <description><![CDATA[USE ADB in WSL 1 2 3 # ADB export PATH=&#34;$PATH:/mnt/d/Tools/Android/SDK/platform-tools&#34; alias adb=&#34;/mnt/d/Tools/Android/SDK/platform-tools/adb.exe&#34; 由于将adb的路径alias后，默认在sh中是找不到的，若想在sh脚本中使用ADB，需在脚本前添加以下代码: 1 2 #!/bin/bash]]></description>
+</item>
+<item>
+    <title>idapython笔记</title>
+    <link>https://0xdaidai.github.io/idapython%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Mon, 01 Mar 2021 22:24:05 &#43;0000</pubDate>
+    <author>0xdaidai</author>
+    <guid>https://0xdaidai.github.io/idapython%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[idapython 从-1开始学习ida。 全部抄自《IDAPython 初学者指南》，手动翻译成了ida7.5+python3。 指令学习 节区操作 1 2 3 4 5 6 7 8]]></description>
 </item>
 </channel>
 </rss>

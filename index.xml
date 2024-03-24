@@ -61,5 +61,13 @@
     <guid>https://0xdaidai.github.io/friends/</guid>
     <description><![CDATA[or4nge 小橘子真好吃~ s0uthwood 逆向天花板 t1anst GOD ttt triplewings next master of pwn Mobilis In Mobili_ 中本航 ssgss web king pil10w yet another web king s1eepy know any except misc newbiereer 一曲长歌，一剑天涯 wood stay hungry stay foolish. crazyman CTF还得看空白神]]></description>
 </item>
+<item>
+    <title>idapython笔记</title>
+    <link>https://0xdaidai.github.io/idapython%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Mon, 01 Mar 2021 22:24:05 &#43;0000</pubDate>
+    <author>0xdaidai</author>
+    <guid>https://0xdaidai.github.io/idapython%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[idapython 从-1开始学习ida。 全部抄自《IDAPython 初学者指南》，手动翻译成了ida7.5+python3。 指令学习 节区操作 1 2 3 4 5 6 7 8]]></description>
+</item>
 </channel>
 </rss>

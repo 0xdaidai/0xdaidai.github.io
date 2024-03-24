@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>asm - Tag - 呆呆的小窝~</title>
+        <title>Asm - Tag - 呆呆的小窝~</title>
         <link>https://0xdaidai.github.io/tags/asm/</link>
-        <description>asm - Tag - 呆呆的小窝~</description>
+        <description>Asm - Tag - 呆呆的小窝~</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 25 Sep 2023 11:31:57 &#43;0800</lastBuildDate><atom:link href="https://0xdaidai.github.io/tags/asm/" rel="self" type="application/rss+xml" /><item>
     <title>Mixed_c_with_asm</title>
     <link>https://0xdaidai.github.io/mixed_c_with_asm/</link>
