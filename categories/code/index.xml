@@ -9,7 +9,9 @@
     <pubDate>Mon, 25 Sep 2023 11:31:57 &#43;0800</pubDate>
     <author>0xdaidai</author>
     <guid>https://0xdaidai.github.io/mixed_c_with_asm/</guid>
-    <description><![CDATA[前几天群里提到的问题，简单记录下查阅到的方法。 在C中调用汇编中定义的函数 以Linux x86为例，用汇编语言编写一个hello_world函数]]></description>
+    <description><![CDATA[<p>前几天群里提到的问题，简单记录下查阅到的方法。</p>
+<h2 id="在c中调用汇编中定义的函数">在C中调用汇编中定义的函数</h2>
+<p>以Linux x86为例，用汇编语言编写一个hello_world函数，输出”Hello, World!\n”为例，其不需要任何参数，同时也没有返回值，相应的汇编代码如下：</p>]]></description>
 </item>
 </channel>
 </rss>

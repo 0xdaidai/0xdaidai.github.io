@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-	<meta name="generator" content="Hugo 0.128.2">
+	<meta name="generator" content="Hugo 0.135.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -102,13 +102,242 @@
         alt="/images/gaga.jpg"
         title="/images/gaga.jpg" /></a></div><h1 class="home-title">呆呆的小窝~</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/0xdaidai" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="mailto:rdwentao@163.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/wsl/">WSL</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>0xdaidai</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-09-23">2023-09-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/misc/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Misc</a></span></div><div class="content"><h2 id="脚本">脚本</h2>
+<p><code>/opt/proxy.sh</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/sh
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">hostip</span><span class="o">=</span><span class="k">$(</span>cat /etc/resolv.conf <span class="p">|</span> grep nameserver <span class="p">|</span> awk <span class="s1">&#39;{ print $2 }&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">wslip</span><span class="o">=</span><span class="k">$(</span>hostname -I <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">port</span><span class="o">=</span><span class="m">7890</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">PROXY_HTTP</span><span class="o">=</span><span class="s2">&#34;http://</span><span class="si">${</span><span class="nv">hostip</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">port</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">set_proxy<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">export</span> <span class="nv">http_proxy</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">PROXY_HTTP</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">export</span> <span class="nv">HTTP_PROXY</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">PROXY_HTTP</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">export</span> <span class="nv">https_proxy</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">PROXY_HTTP</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">export</span> <span class="nv">HTTPS_proxy</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">PROXY_HTTP</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		git config --global http.proxy <span class="s2">&#34;</span><span class="si">${</span><span class="nv">PROXY_HTTP</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">		git config --global https.proxy <span class="s2">&#34;</span><span class="si">${</span><span class="nv">PROXY_HTTP</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">unset_proxy<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">unset</span> http_proxy
+</span></span><span class="line"><span class="cl">    <span class="nb">unset</span> HTTP_PROXY
+</span></span><span class="line"><span class="cl">    <span class="nb">unset</span> https_proxy
+</span></span><span class="line"><span class="cl">    <span class="nb">unset</span> HTTPS_PROXY
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		git config --global --unset http.proxy
+</span></span><span class="line"><span class="cl">		git config --global --unset https.proxy
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">test_setting<span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Host ip:&#34;</span> <span class="si">${</span><span class="nv">hostip</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;WSL ip:&#34;</span> <span class="si">${</span><span class="nv">wslip</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Current proxy:&#34;</span> <span class="nv">$https_proxy</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;set&#34;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">    set_proxy
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;unset&#34;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">    unset_proxy
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;test&#34;</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">then</span>
+</span></span><span class="line"><span class="cl">    test_setting
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Unsupported arguments.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>记得替换端口号</strong></p></div><div class="post-footer">
+        <a href="/wsl/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/misc/">Misc</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/close_check/">bypass_ssl</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>0xdaidai</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-09-20">2023-09-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/misc/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Misc</a></span></div><div class="content"><h2 id="wget">wget</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">echo</span> <span class="s">&#34;check_certificate = off&#34;</span> <span class="o">&gt;&gt;</span> <span class="o">~/</span><span class="p">.</span><span class="n">wgetrc</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="curl-忽略证书">curl 忽略证书</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;-k&#34;</span> &gt; ~/.curlrc
+</span></span><span class="line"><span class="cl"><span class="c1"># 因为curl可选参数很多，为了防止命令过长，curl会默认去~/.curlrc下面读取curl的全局参数设置</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="nodejs-忽略证书">nodeJS 忽略证书</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># env</span>
+</span></span><span class="line"><span class="cl"><span class="nv">NODE_TLS_REJECT_UNAUTHORIZED</span><span class="o">=</span><span class="m">0</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="git-忽略证书">git 忽略证书</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global http.sslVerify <span class="nb">false</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="python-忽略证书">python 忽略证书</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">1export <span class="nv">CURL_CA_BUNDLE</span><span class="o">=</span>“”
+</span></span><span class="line"><span class="cl"><span class="c1">#原理请参考：https://stackoverflow.com/questions/48391750/disable-python-requests-ssl-validation-for-an-imported-module</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="yum忽略证书">yum忽略证书</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># /etc/yum.conf</span>
+</span></span><span class="line"><span class="cl"><span class="nv">sslverify</span><span class="o">=</span><span class="nb">false</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="maven忽略证书">maven忽略证书</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mvn -Dmaven.wagon.http.ssl.insecure<span class="o">=</span><span class="nb">true</span> -Dmaven.wagon.http.ssl.allowall<span class="o">=</span><span class="nb">true</span> -Dmaven.wagon.http.ssl.ignore.validity.dates<span class="o">=</span><span class="nb">true</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer">
+        <a href="/close_check/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/misc/">Misc</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/l3hctf2021/">L3HCTF2021</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>0xdaidai</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-11-16">2021-11-16</time></span>&nbsp;<span class="post-category">included in <a href="/categories/pwn/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Pwn</a></span></div><div class="content">L3HCTF2021 PWN 躺了个第一，被带飞了。 看了一下只有这题值得记录👇 vul_service 分析 题目来自CVE-2019-0863，注册了一个系统服务，功能是会不断遍历tmp目录</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>0xdaidai</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-11-16">2021-11-16</time></span>&nbsp;<span class="post-category">included in <a href="/categories/pwn/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Pwn</a></span></div><div class="content"><h1 id="l3hctf2021-pwn">L3HCTF2021 PWN</h1>
+<p>躺了个第一，被带飞了。</p>
+<!-- more -->
+<p>看了一下只有这题值得记录👇</p>
+<h2 id="vul_service">vul_service</h2>
+<h3 id="分析">分析</h3>
+<p>题目来自CVE-2019-0863，注册了一个系统服务，功能是会不断遍历tmp目录下文件，读取其权限并写回去，注意到是根据文件名来判断并且没有加锁，考虑使用TOCTOU来攻击。</p></div><div class="post-footer">
         <a href="/l3hctf2021/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/pwn/">Pwn</a>,&nbsp;<a href="/tags/windows/">Windows</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/idapython/">idapython笔记</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>0xdaidai</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-03-01">2021-03-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/reverse/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Reverse</a></span></div><div class="content">idapython 从-1开始学习ida。 全部抄自《IDAPython 初学者指南》，手动翻译成了ida7.5+python3。 指令学习 节区操作 1 2 3 4 5 6 7 8</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>0xdaidai</a></span>&nbsp;<span class="post-publish">published on <time datetime="2021-03-01">2021-03-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/reverse/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Reverse</a></span></div><div class="content"><h1 id="idapython">idapython</h1>
+<p>从-1开始学习ida。</p>
+<!-- more -->
+<p>全部抄自《IDAPython 初学者指南》，手动翻译成了ida7.5+python3。</p>
+<h2 id="指令学习">指令学习</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./ida_python.png"
+        data-srcset="./ida_python.png, ./ida_python.png 1.5x, ./ida_python.png 2x"
+        data-sizes="auto"
+        alt="./ida_python.png"
+        title="ida-python指令大全" /></p>
+<h3 id="节区操作">节区操作</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ea</span> <span class="o">=</span> <span class="n">idc</span><span class="o">.</span><span class="n">get_screen_ea</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">ea</span> <span class="o">=</span> <span class="n">here</span><span class="p">()</span> <span class="c1"># 函数获取当前地址</span>
+</span></span><span class="line"><span class="cl"><span class="n">ida_ida</span><span class="o">.</span><span class="n">inf_get_min_ea</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">ida_ida</span><span class="o">.</span><span class="n">inf_get_max_ea</span><span class="p">()</span> <span class="c1"># 获取当前文件的最大、小地址</span>
+</span></span><span class="line"><span class="cl"><span class="n">idc</span><span class="o">.</span><span class="n">get_segm_name</span><span class="p">(</span><span class="n">ea</span><span class="p">)</span> <span class="c1"># get text</span>
+</span></span><span class="line"><span class="cl"><span class="n">idc</span><span class="o">.</span><span class="n">GetDisasm</span><span class="p">(</span><span class="n">ea</span><span class="p">)</span> <span class="c1"># get disassembly</span>
+</span></span><span class="line"><span class="cl"><span class="n">idc</span><span class="o">.</span><span class="n">print_insn_mnem</span><span class="p">(</span><span class="n">ea</span><span class="p">)</span> <span class="c1"># get mnemonic</span>
+</span></span><span class="line"><span class="cl"><span class="n">idc</span><span class="o">.</span><span class="n">print_operand</span><span class="p">(</span><span class="n">ea</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># get first operand</span>
+</span></span><span class="line"><span class="cl"><span class="n">idc</span><span class="o">.</span><span class="n">print_operand</span><span class="p">(</span><span class="n">ea</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># get second operand</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>一个例子</p></div><div class="post-footer">
         <a href="/idapython/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/reverse/">Reverse</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
@@ -121,7 +350,7 @@
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.135.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">0xdaidai</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

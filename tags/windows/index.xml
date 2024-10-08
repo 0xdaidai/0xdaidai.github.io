@@ -9,7 +9,13 @@
     <pubDate>Tue, 16 Nov 2021 17:59:18 &#43;0000</pubDate>
     <author>0xdaidai</author>
     <guid>https://0xdaidai.github.io/l3hctf2021/</guid>
-    <description><![CDATA[L3HCTF2021 PWN 躺了个第一，被带飞了。 看了一下只有这题值得记录👇 vul_service 分析 题目来自CVE-2019-0863，注册了一个系统服务，功能是会不断遍历tmp目录]]></description>
+    <description><![CDATA[<h1 id="l3hctf2021-pwn">L3HCTF2021 PWN</h1>
+<p>躺了个第一，被带飞了。</p>
+<!-- more -->
+<p>看了一下只有这题值得记录👇</p>
+<h2 id="vul_service">vul_service</h2>
+<h3 id="分析">分析</h3>
+<p>题目来自CVE-2019-0863，注册了一个系统服务，功能是会不断遍历tmp目录下文件，读取其权限并写回去，注意到是根据文件名来判断并且没有加锁，考虑使用TOCTOU来攻击。</p>]]></description>
 </item>
 </channel>
 </rss>

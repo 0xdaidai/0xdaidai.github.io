@@ -9,7 +9,40 @@
     <pubDate>Mon, 19 Feb 2024 11:27:06 &#43;0800</pubDate>
     <author>0xdaidai</author>
     <guid>https://0xdaidai.github.io/apk/</guid>
-    <description><![CDATA[adb 1 2 adb devices # 查看设备 adb shell ida调试so 一般断在Jni_onload 1 2 adb forward tcp:23946 tcp:23946 adb shell 1 2 cd /data/local/tmp ./androidserver androidserver的位数应该和so对应，]]></description>
+    <description><![CDATA[<h2 id="adb">adb</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">adb</span> <span class="n">devices</span> <span class="err">#</span> <span class="err">查看设备</span>
+</span></span><span class="line"><span class="cl"><span class="n">adb</span> <span class="n">shell</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="ida调试so">ida调试so</h2>
+<p>一般断在Jni_onload</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">adb</span> <span class="n">forward</span> <span class="nl">tcp</span><span class="p">:</span><span class="mi">23946</span> <span class="nl">tcp</span><span class="p">:</span><span class="mi">23946</span>
+</span></span><span class="line"><span class="cl"><span class="n">adb</span> <span class="n">shell</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">cd</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">tmp</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="o">/</span><span class="n">androidserver</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>androidserver的位数应该和so对应，不过跑以下看能不能搜到进程就知道了。</p>]]></description>
 </item>
 <item>
     <title>Adb</title>
@@ -17,7 +50,46 @@
     <pubDate>Mon, 25 Sep 2023 11:27:06 &#43;0800</pubDate>
     <author>0xdaidai</author>
     <guid>https://0xdaidai.github.io/adb/</guid>
-    <description><![CDATA[USE ADB in WSL 1 2 3 # ADB export PATH=&#34;$PATH:/mnt/d/Tools/Android/SDK/platform-tools&#34; alias adb=&#34;/mnt/d/Tools/Android/SDK/platform-tools/adb.exe&#34; 由于将adb的路径alias后，默认在sh中是找不到的，若想在sh脚本中使用ADB，需在脚本前添加以下代码: 1 2 #!/bin/bash]]></description>
+    <description><![CDATA[<h2 id="use-adb-in-wsl">USE ADB in WSL</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># ADB</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$PATH</span><span class="s2">:/mnt/d/Tools/Android/SDK/platform-tools&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">adb</span><span class="o">=</span><span class="s2">&#34;/mnt/d/Tools/Android/SDK/platform-tools/adb.exe&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>由于将adb的路径alias后，默认在sh中是找不到的，若想在sh脚本中使用ADB，需在脚本前添加以下代码:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash -i
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nb">shopt</span> -s expand_aliases
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="usage">Usage</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb push ready_to_push path
+</span></span><span class="line"><span class="cl">adb pull path_to_want
+</span></span><span class="line"><span class="cl"><span class="c1"># if read-only system</span>
+</span></span><span class="line"><span class="cl">adb remout
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item>
 </channel>
 </rss>
