@@ -1,24 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Pwn - Tag - 呆呆的小窝~</title>
-        <link>https://0xdaidai.github.io/tags/pwn/</link>
-        <description>Pwn - Tag - 呆呆的小窝~</description>
+        <title>Kernel - Tag - 呆呆的小窝~</title>
+        <link>https://0xdaidai.github.io/tags/kernel/</link>
+        <description>Kernel - Tag - 呆呆的小窝~</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ret2daidai@gmail.com (0xdaidai)</managingEditor>
-            <webMaster>ret2daidai@gmail.com (0xdaidai)</webMaster><lastBuildDate>Mon, 25 Sep 2023 11:37:02 &#43;0800</lastBuildDate><atom:link href="https://0xdaidai.github.io/tags/pwn/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>ret2daidai@gmail.com (0xdaidai)</webMaster><lastBuildDate>Mon, 25 Sep 2023 11:37:02 &#43;0800</lastBuildDate><atom:link href="https://0xdaidai.github.io/tags/kernel/" rel="self" type="application/rss+xml" /><item>
     <title>Kernel</title>
     <link>https://0xdaidai.github.io/kernel/</link>
     <pubDate>Mon, 25 Sep 2023 11:37:02 &#43;0800</pubDate>
     <author>0xdaidai</author>
     <guid>https://0xdaidai.github.io/kernel/</guid>
     <description><![CDATA[kallsyms 1 2 3 4 5 6 7 8 9 10 11 12 import idc import ida_funcs import ida_kernwin ksyms = open(&#34;/path/to/kallsyms.txt&#34;) for line in ksyms: addr = int(line[0:16],16) name = line[19:].replace(&#39;_&#39;,&#39;&#39;) name = line[19:].replace(&#39;\n&#39;,&#39;&#39;) idc.create_insn(addr) ida_funcs.add_func(addr) idc.set_name(addr,name) ida_kernwin.msg(&#34;%08X:%s&#34;%(addr,name)) passwd 1 2 pwned:$1$aa$Sc4m1DBsyHWbRbwmIbGHq1:0:0:/root:/root:/bin/sh # 密码：lol cpio 1 2 3 4 5 6 7 8 gcc -o exp -static exp.c -masm=intel -s -lpthread mv ./exp ./initramfs]]></description>
-</item>
-<item>
-    <title>L3HCTF2021</title>
-    <link>https://0xdaidai.github.io/l3hctf2021/</link>
-    <pubDate>Tue, 16 Nov 2021 17:59:18 &#43;0000</pubDate>
-    <author>0xdaidai</author>
-    <guid>https://0xdaidai.github.io/l3hctf2021/</guid>
-    <description><![CDATA[L3HCTF2021 PWN 躺了个第一，被带飞了。 看了一下只有这题值得记录👇 vul_service 分析 题目来自CVE-2019-0863，注册了一个系统服务，功能是会不断遍历tmp目录]]></description>
 </item>
 </channel>
 </rss>

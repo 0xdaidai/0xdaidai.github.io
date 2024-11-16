@@ -5,6 +5,14 @@
         <description>Pwn - Category - 呆呆的小窝~</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ret2daidai@gmail.com (0xdaidai)</managingEditor>
             <webMaster>ret2daidai@gmail.com (0xdaidai)</webMaster><lastBuildDate>Mon, 19 Feb 2024 11:27:06 &#43;0800</lastBuildDate><atom:link href="https://0xdaidai.github.io/categories/pwn/" rel="self" type="application/rss+xml" /><item>
+    <title>Kernel</title>
+    <link>https://0xdaidai.github.io/kernel/</link>
+    <pubDate>Mon, 25 Sep 2023 11:37:02 &#43;0800</pubDate>
+    <author>0xdaidai</author>
+    <guid>https://0xdaidai.github.io/kernel/</guid>
+    <description><![CDATA[kallsyms 1 2 3 4 5 6 7 8 9 10 11 12 import idc import ida_funcs import ida_kernwin ksyms = open(&#34;/path/to/kallsyms.txt&#34;) for line in ksyms: addr = int(line[0:16],16) name = line[19:].replace(&#39;_&#39;,&#39;&#39;) name = line[19:].replace(&#39;\n&#39;,&#39;&#39;) idc.create_insn(addr) ida_funcs.add_func(addr) idc.set_name(addr,name) ida_kernwin.msg(&#34;%08X:%s&#34;%(addr,name)) passwd 1 2 pwned:$1$aa$Sc4m1DBsyHWbRbwmIbGHq1:0:0:/root:/root:/bin/sh # 密码：lol cpio 1 2 3 4 5 6 7 8 gcc -o exp -static exp.c -masm=intel -s -lpthread mv ./exp ./initramfs]]></description>
+</item>
+<item>
     <title>Apk杂记</title>
     <link>https://0xdaidai.github.io/apk/</link>
     <pubDate>Mon, 19 Feb 2024 11:27:06 &#43;0800</pubDate>
