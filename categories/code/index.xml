@@ -3,15 +3,14 @@
         <title>Code - Category - 呆呆的小窝~</title>
         <link>https://0xdaidai.github.io/categories/code/</link>
         <description>Code - Category - 呆呆的小窝~</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 25 Sep 2023 11:31:57 &#43;0800</lastBuildDate><atom:link href="https://0xdaidai.github.io/categories/code/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ret2daidai@gmail.com (0xdaidai)</managingEditor>
+            <webMaster>ret2daidai@gmail.com (0xdaidai)</webMaster><lastBuildDate>Mon, 25 Sep 2023 11:31:57 &#43;0800</lastBuildDate><atom:link href="https://0xdaidai.github.io/categories/code/" rel="self" type="application/rss+xml" /><item>
     <title>Mixed_c_with_asm</title>
     <link>https://0xdaidai.github.io/mixed_c_with_asm/</link>
     <pubDate>Mon, 25 Sep 2023 11:31:57 &#43;0800</pubDate>
     <author>0xdaidai</author>
     <guid>https://0xdaidai.github.io/mixed_c_with_asm/</guid>
-    <description><![CDATA[<p>前几天群里提到的问题，简单记录下查阅到的方法。</p>
-<h2 id="在c中调用汇编中定义的函数">在C中调用汇编中定义的函数</h2>
-<p>以Linux x86为例，用汇编语言编写一个hello_world函数，输出”Hello, World!\n”为例，其不需要任何参数，同时也没有返回值，相应的汇编代码如下：</p>]]></description>
+    <description><![CDATA[前几天群里提到的问题，简单记录下查阅到的方法。 在C中调用汇编中定义的函数 以Linux x86为例，用汇编语言编写一个hello_world函数]]></description>
 </item>
 </channel>
 </rss>

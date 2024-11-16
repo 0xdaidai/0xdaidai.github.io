@@ -3,44 +3,14 @@
         <title>Reverse - Tag - 呆呆的小窝~</title>
         <link>https://0xdaidai.github.io/tags/reverse/</link>
         <description>Reverse - Tag - 呆呆的小窝~</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 01 Mar 2021 22:24:05 &#43;0000</lastBuildDate><atom:link href="https://0xdaidai.github.io/tags/reverse/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>ret2daidai@gmail.com (0xdaidai)</managingEditor>
+            <webMaster>ret2daidai@gmail.com (0xdaidai)</webMaster><lastBuildDate>Mon, 01 Mar 2021 22:24:05 &#43;0000</lastBuildDate><atom:link href="https://0xdaidai.github.io/tags/reverse/" rel="self" type="application/rss+xml" /><item>
     <title>idapython笔记</title>
     <link>https://0xdaidai.github.io/idapython/</link>
     <pubDate>Mon, 01 Mar 2021 22:24:05 &#43;0000</pubDate>
     <author>0xdaidai</author>
     <guid>https://0xdaidai.github.io/idapython/</guid>
-    <description><![CDATA[<h1 id="idapython">idapython</h1>
-<p>从-1开始学习ida。</p>
-<!-- more -->
-<p>全部抄自《IDAPython 初学者指南》，手动翻译成了ida7.5+python3。</p>
-<h2 id="指令学习">指令学习</h2>
-<p></p>
-<h3 id="节区操作">节区操作</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ea</span> <span class="o">=</span> <span class="n">idc</span><span class="o">.</span><span class="n">get_screen_ea</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">ea</span> <span class="o">=</span> <span class="n">here</span><span class="p">()</span> <span class="c1"># 函数获取当前地址</span>
-</span></span><span class="line"><span class="cl"><span class="n">ida_ida</span><span class="o">.</span><span class="n">inf_get_min_ea</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">ida_ida</span><span class="o">.</span><span class="n">inf_get_max_ea</span><span class="p">()</span> <span class="c1"># 获取当前文件的最大、小地址</span>
-</span></span><span class="line"><span class="cl"><span class="n">idc</span><span class="o">.</span><span class="n">get_segm_name</span><span class="p">(</span><span class="n">ea</span><span class="p">)</span> <span class="c1"># get text</span>
-</span></span><span class="line"><span class="cl"><span class="n">idc</span><span class="o">.</span><span class="n">GetDisasm</span><span class="p">(</span><span class="n">ea</span><span class="p">)</span> <span class="c1"># get disassembly</span>
-</span></span><span class="line"><span class="cl"><span class="n">idc</span><span class="o">.</span><span class="n">print_insn_mnem</span><span class="p">(</span><span class="n">ea</span><span class="p">)</span> <span class="c1"># get mnemonic</span>
-</span></span><span class="line"><span class="cl"><span class="n">idc</span><span class="o">.</span><span class="n">print_operand</span><span class="p">(</span><span class="n">ea</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># get first operand</span>
-</span></span><span class="line"><span class="cl"><span class="n">idc</span><span class="o">.</span><span class="n">print_operand</span><span class="p">(</span><span class="n">ea</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># get second operand</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>一个例子</p>]]></description>
+    <description><![CDATA[idapython 从-1开始学习ida。 全部抄自《IDAPython 初学者指南》，手动翻译成了ida7.5+python3。 指令学习 节区操作 1 2 3 4 5 6 7 8]]></description>
 </item>
 </channel>
 </rss>
